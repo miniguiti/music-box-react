@@ -42,4 +42,4 @@ npm start
 
 ## Desenvolvedores
 - @miniguiti
-
+- @reis278
