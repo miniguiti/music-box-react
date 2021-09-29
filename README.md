@@ -40,6 +40,7 @@ npm start
 
 #
 
-## Desenvolvedores
-- @miniguiti
+## Criado por
+- @miniguiti 
+- @fernandacaramico
 - @reis278
