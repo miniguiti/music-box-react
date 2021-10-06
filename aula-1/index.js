@@ -7,15 +7,46 @@ var divApp = document.getElementById("app");
 
 // divApp.appendChild(titulo);
 
-//nome de componente padrão PascalCase
-function PrimeiroComponente() {
+//Nome de componente padrão PascalCase
+function Contador(props) {
+
+  const [numero, setNumero] = React.useState(0);
+
+  function somar(){
+    setNumero(numero + 1);
+    console.log(numero)
+  }
+
+  function subtrair(){
+    setNumero(numero - 1);
+    console.log(numero)
+  }
+
   return(
     <React.Fragment>
-        <h1>Esse titulo foi criado com React usando JSX :O</h1>
-        <h2>Esse também foi</h2>
+        <h1>{props.titulo}</h1>
+        <h2>{numero}</h2>
+        <button onClick={somar}>+</button>
+        <button onClick={subtrair}>-</button>
     </React.Fragment>
-
   ) ;
 }
 
-ReactDOM.render(PrimeiroComponente(), divApp);
+function App(){
+  return(
+    <React.Fragment>
+      <h1>Vote no correto: </h1>
+      <Contador titulo = "Bolacha"/>
+      <Contador titulo = "Biscoito"/>
+      <Contador titulo = "Nenhum desses!"/>
+      <Contador titulo = "Depende!"/>
+    </React.Fragment>
+  );
+}
+
+ReactDOM.render(React.createElement(App), divApp);
+
+//Um componente pode receber props
+//Essas props podem passar para outro componente
+//Um componente pode chamar outro (que pode chamar outro e outro.....e outro)
+//Um componente pode conter funções (funções dentro de funções)
