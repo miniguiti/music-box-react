@@ -1,6 +1,12 @@
+import './html-css-template/css/style.css'
+import './html-css-template/css/reset.css'
+import PaginaInicial from './pages/PaginaInicial';
+
 function App() {
   return (
-    <h1>¯\_(ツ)_/¯ "Na minha maquina funciona".</h1>
+    <>
+        <PaginaInicial/>
+    </>
   );
 }
 
