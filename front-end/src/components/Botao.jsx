@@ -1,9 +1,12 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
-function BotaoAzul() {
+function BotaoAzul(props) {
   return (
     <>
-      <button class="btn">ABC</button>
+    <Link to={props.destino}>
+      <button class="btn">{props.texto}</button>
+    </Link>
     </>
   );
 }

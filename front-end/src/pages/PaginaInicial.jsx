@@ -19,7 +19,7 @@ function PaginaInicial() {
               </p>
             </div>
             <div class="img-index"></div>
-            <BotaoAzul/>
+            <BotaoAzul destino="/musicas" texto="faça parte"/>
           </div>
           <img src={waves} alt="" class="index-img" />
         </div>

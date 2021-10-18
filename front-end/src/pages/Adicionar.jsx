@@ -1,5 +1,5 @@
 import React from "react";
-import BotaoAzul from "../components/Botao";
+import Botao from "../components/Botao";
 import Menu from "../components/Menu";
 import circles from '../html-css-template/imgs/half-circles-pink-blue.png'
 
@@ -27,7 +27,7 @@ function Adicionar() {
                     <br/>
                     <label> Imagem (url): <br/><input type="text" /></label>
                     <br/>
-                    <BotaoAzul/>
+                    <Botao/>
 
                 </form>
             </div>
