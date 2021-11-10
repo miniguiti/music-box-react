@@ -1,30 +1,44 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
+import api from "../api";
 import BotaoAzul from "../components/Botao";
 import CardMusica from "../components/CardMusica";
 import Menu from "../components/Menu";
 
 function Musicas() {
+  //guarda as músicas
+  const [musicas, setMusicas] = useState([]);
+
+  useEffect(() => {
+    async function buscarMusicas(){
+      const resposta = await api.get("")
+      setMusicas(resposta.data)
+      console.log("olha o que veio da api!!!",resposta.data)
+    }
+    buscarMusicas()
+  },[]);
+
   return (
     <>
       <Menu />
 
-      <div class="container">
-        <div class="filter">
-          <BotaoAzul texto="Adicionar"/>
+      <div className="container">
+        <div className="filter">
+          <BotaoAzul/>
         </div>
       </div>
 
-      <div class="container">
-        <div class="music-boxes">
-            <CardMusica musica="Nome Musica 1"  ano="2000" artista="Zé"/>
-            <CardMusica musica="Nome Musica 2" categoria="Nome categoria" ano="0000" artista="Nickname"/>
-            <CardMusica musica="Nome Musica 3" categoria="Nome categoria" ano="0000" artista="Nickname"/>
-            <CardMusica musica="Nome Musica 4" categoria="Nome" ano="0000" artista="Nickname"/>
-            <CardMusica musica="Nome Musica 5" categoria="Nome categoria" ano="1999" artista="Nickname"/>
-            <CardMusica musica="Nome Musica 6" categoria="Nome categoria" ano="0000" artista="Nickname"/>
-            <CardMusica musica="Nome Musica 7" categoria="Nome categoria" ano="0000" artista="Jão"/>
-            <CardMusica musica="Nome Musica 8" categoria="Nome categoria" ano="0000" artista="Nickname"/>
-            <CardMusica musica="Nome Musica 9" categoria="Nome categoria" ano="0000" artista="Nickname"/>   
+      <div className="container">
+        <div className="music-boxes">
+           {
+             musicas.map((musica) =>(
+               <CardMusica
+                artista={musica.artista}
+                ano={musica.lancamento}
+                musica={musica.nome}
+                categoria={musica.categoria}
+               />
+             ))
+           }
         </div>
       </div>
     </>
