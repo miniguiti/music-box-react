@@ -8,20 +8,20 @@ function PaginaInicial() {
   return (
     <>
       <Menu />
-      <div class="container index">
-        <div class="index-content">
-          <div class="box-text-index">
-            <div class="info-index">
-              <p class="display">a música certa para o seu mood</p>
-              <p class="subtitle">
+      <div className="container index">
+        <div className="index-content">
+          <div className="box-text-index">
+            <div className="info-index">
+              <p className="display">a música certa para o seu mood</p>
+              <p className="subtitle">
                 organize suas músicas preferidas por categorias e aproveite cada
                 batida
               </p>
             </div>
-            <div class="img-index"></div>
+            <div className="img-index"></div>
             <BotaoAzul destino="/musicas" texto="faça parte"/>
           </div>
-          <img src={waves} alt="" class="index-img" />
+          <img src={waves} alt="" className="index-img" />
         </div>
       </div>
     </>

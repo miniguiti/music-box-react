@@ -7,18 +7,18 @@ function PaginaNaoEncontrada() {
   return (
     <>
       <Menu />
-      <div class="container">
-        <div class="add-music">
+      <div className="container">
+        <div className="add-music">
 
-            <div class="formulario">
+            <div className="formulario">
 
                 <h1>404</h1>
 
-                <p class="subtitle">se perdeu? nada para ver por aqui...</p>
+                <p className="subtitle">se perdeu? nada para ver por aqui...</p>
                 <BotaoAzul/>
             </div>
 
-            <div class="img-lateral">
+            <div className="img-lateral">
                 <img src={target} alt="" />
             </div>
 

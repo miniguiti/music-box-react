@@ -23,7 +23,7 @@ function Musicas() {
 
       <div className="container">
         <div className="filter">
-          <BotaoAzul/>
+          <BotaoAzul texto="Adicionar" destino="/adicionar"/>
         </div>
       </div>
 
@@ -32,10 +32,12 @@ function Musicas() {
            {
              musicas.map((musica) =>(
                <CardMusica
+                key={musica.id}
                 artista={musica.artista}
                 ano={musica.lancamento}
                 musica={musica.nome}
                 categoria={musica.categoria}
+                url={musica.url}
                />
              ))
            }

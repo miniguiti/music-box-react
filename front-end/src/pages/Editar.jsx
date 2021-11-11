@@ -7,9 +7,9 @@ function Editar() {
   return (
     <>
       <Menu />
-      <div class="container">
-        <div class="add-music">
-            <div class="formulario">
+      <div className="container">
+        <div className="add-music">
+            <div className="formulario">
                 <h1>editar</h1>
 
                 <br/>
@@ -30,7 +30,7 @@ function Editar() {
                 </form>
             </div>
 
-            <div class="img-lateral">
+            <div className="img-lateral">
                 <img src={circles} alt="" />
             </div>
         </div>

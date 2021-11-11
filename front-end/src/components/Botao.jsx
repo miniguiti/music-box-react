@@ -5,7 +5,7 @@ function BotaoAzul(props) {
   return (
     <>
     <Link to={props.destino}>
-      <button class="btn">{props.texto}</button>
+      <button className="btn">{props.texto}</button>
     </Link>
     </>
   );

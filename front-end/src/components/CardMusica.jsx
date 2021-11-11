@@ -1,10 +1,17 @@
 import React from "react";
+import deletarIcone from '../html-css-template/imgs/delete-icon.png'
+import editarIcone from '../html-css-template/imgs/edit-icon.png'
 
 function CardMusica(props) {
+
+  const capaMusica = {
+    backgroundImage: `url(${props.url})`
+  }
+
   return (
     <>
-      <div class="card-music">
-        <div class="info-music">
+      <div className="card-music" style={capaMusica}>
+        <div className="info-music">
           <p>
             <strong>música: </strong>{props.musica}
           </p>
@@ -17,9 +24,9 @@ function CardMusica(props) {
           <p>
             <strong>ano: </strong>{props.ano}
           </p>
-          <p class="icons">
-            <img src="../imgs/edit-icon.png" alt="" />
-            <img src="../imgs/delete-icon.png" alt="" />
+          <p className="icons">
+            <img src={editarIcone} alt="" />
+            <img src={deletarIcone} alt="" />
           </p>
         </div>
       </div>
