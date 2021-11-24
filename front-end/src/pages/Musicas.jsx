@@ -15,7 +15,7 @@ function Musicas() {
       console.log("olha o que veio da api!!!",resposta.data)
     }
     buscarMusicas()
-  },[musicas]);
+  },[]);
 
   return (
     <>
