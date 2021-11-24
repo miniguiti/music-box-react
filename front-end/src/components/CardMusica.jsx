@@ -1,4 +1,6 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
+import api from "../api";
 import deletarIcone from '../html-css-template/imgs/delete-icon.png'
 import editarIcone from '../html-css-template/imgs/edit-icon.png'
 
@@ -7,7 +9,7 @@ function CardMusica(props) {
   const capaMusica = {
     backgroundImage: `url(${props.url})`
   }
-
+  
   return (
     <>
       <div className="card-music" style={capaMusica}>
@@ -25,8 +27,11 @@ function CardMusica(props) {
             <strong>ano: </strong>{props.ano}
           </p>
           <p className="icons">
-            <img src={editarIcone} alt="" />
-            <img src={deletarIcone} alt="" />
+            <Link to={`/editar/${props.id}`}>
+              <img src={editarIcone} alt="" />
+            </Link>
+
+              <img src={deletarIcone} alt="" onClick={deletar}/>
           </p>
         </div>
       </div>

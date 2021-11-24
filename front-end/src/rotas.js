@@ -16,7 +16,7 @@ function Rotas(){
             <Switch>
                <Route exact path="/" component={PaginaInicial}/> 
                <Route exact path="/adicionar" component={Adicionar}/>
-               <Route exact path="/editar" component={Editar}/>
+               <Route exact path="/editar/:id" component={Editar}/>
                <Route exact path="/musicas" component={Musicas}/>
                <Route exact path="*" component={PaginaNaoEncontrada}/>
             </Switch>

@@ -1,4 +1,6 @@
 import React, { useState } from "react";
+import { useHistory } from "react-router";
+import { Link } from "react-router-dom";
 import api from "../api";
 import Botao from "../components/Botao";
 import Menu from "../components/Menu";
@@ -11,17 +13,19 @@ function Adicionar() {
   const [anoDigitado, setAnoDigitado] = useState("");
   const [urlDigitada, setUrlDigitada] = useState("");
 
+  const history = useHistory();
+
   function cadastrar(e){
     e.preventDefault();
 
     api.post("",{
-nome: nomeDigitado,
-artista: artistaDigitado,
-categoria: generoDigitado,
-lancamento: anoDigitado,
-url: urlDigitada
+      nome: nomeDigitado,
+      artista: artistaDigitado,
+      categoria: generoDigitado,
+      lancamento: anoDigitado,
+      url: urlDigitada
     }).then((resposta) => {
-      alert("Música cadastrada!")
+      history.push("/musicas")
     }).catch((erro) => {
       console.log("Erro ao cadastrar música!")
     });

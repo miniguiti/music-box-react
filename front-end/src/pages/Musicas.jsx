@@ -15,7 +15,7 @@ function Musicas() {
       console.log("olha o que veio da api!!!",resposta.data)
     }
     buscarMusicas()
-  },[]);
+  },[musicas]);
 
   return (
     <>
@@ -33,6 +33,7 @@ function Musicas() {
              musicas.map((musica) =>(
                <CardMusica
                 key={musica.id}
+                id={musica.id}
                 artista={musica.artista}
                 ano={musica.lancamento}
                 musica={musica.nome}
