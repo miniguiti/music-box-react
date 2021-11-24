@@ -9,7 +9,7 @@ function CardMusica(props) {
   const capaMusica = {
     backgroundImage: `url(${props.url})`
   }
-  
+
   return (
     <>
       <div className="card-music" style={capaMusica}>
@@ -30,8 +30,10 @@ function CardMusica(props) {
             <Link to={`/editar/${props.id}`}>
               <img src={editarIcone} alt="" />
             </Link>
-
-              <img src={deletarIcone} alt="" onClick={deletar}/>
+            <Link>
+              <img src={deletarIcone} alt=""/>
+            </Link>
+              
           </p>
         </div>
       </div>
