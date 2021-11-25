@@ -10,6 +10,17 @@ function CardMusica(props) {
     backgroundImage: `url(${props.url})`
   }
 
+  function deletarMusica(){
+    api.delete(`/${props.id}`)
+    .then((resposta)=>{
+      window.location.reload();
+      console.log("DELETOU!!!")
+    })
+    .catch((erro) => {
+      console.log("ERRO AO DELETAR!")
+    })
+  }
+
   return (
     <>
       <div className="card-music" style={capaMusica}>
@@ -30,8 +41,8 @@ function CardMusica(props) {
             <Link to={`/editar/${props.id}`}>
               <img src={editarIcone} alt="" />
             </Link>
-            <Link>
-              <img src={deletarIcone} alt=""/>
+            <Link onClick={deletarMusica} to="/musicas">
+              <img src={deletarIcone} alt="" />
             </Link>
               
           </p>

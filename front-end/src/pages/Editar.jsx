@@ -11,6 +11,7 @@ function Editar() {
 
   const history = useHistory();
 
+
   const [nome, setNome] = useState("");
   const [artista, setArtista] = useState("");
   const [genero, setGenero] = useState("");
@@ -54,7 +55,6 @@ function Editar() {
     }).catch((erro) => {
       alert("Erro ao alterar música!")
     })
-
   }
 
   return (
@@ -94,7 +94,7 @@ function Editar() {
               </label>
               <br />
               
-              <button type="submit"> ATUALIZAR </button>
+              <button className="btn" type="submit"> ATUALIZAR </button>
 
             </form>
           </div>
